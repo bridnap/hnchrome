@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hacker News for Google Chrome Options</title>
+	<script src="jquery.js"></script>
+	<script src="core.js"></script>
+	<script src="options.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body id='OptionsPage'>
+	<div id="container">
+		<div id="header">
+			<img src="icon18.png" />
+			<span id="title">Extension Options</span>
+		</div>
+		<div id="feed">
+			<label for="RequestInterval">Update Frequency:</label>
+			<select id="RequestInterval" name="RequestInterval">
+				<option value="1800000">30 minutes</option>
+				<option value="3600000">1 hour</option>
+			</select><br/>
+			<label>Limiting choices due to <a href="http://www.amazon.com/The-Paradox-Choice-More-Less/dp/149151423X">The Paradox of Choice</a>, and work interrupting breaks.</label><br/><br/>
+			<label for="BackgroundTabs">Immediate focus on clicked stories or tab it for reading later?</label><br/>
+			<input type="radio" class='background-tabs-radio' name="BackgroundTabs" value="true"> Immediate Focus
+			<input type="radio" class="second-radio background-tabs-radio" name="BackgroundTabs" value="false"> Read Later<br/>
+			<p>Created by <b>Brian Plunkett</b> @ <a href='https://www.linkedin.com/in/briandplunkett' target='_blank'>LinkedIn</a><p>
+		</div>
+	</div>
+</body>
+</html>

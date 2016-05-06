@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery.js"></script>
+<script src="core.js"></script>
+<script src="json2.js"></script>
+<script src="popup.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+<style>
+  body {overflow: hidden;}
+  #container, #spinner {width:350px; margin:0px auto;}
+  #footer {font-size:11px;}
+#spinner {height:300px;}
+#searchbox { margin:12px 3px 0 26px; font-size:11px; width:215px;}
+#searchbutton {font-family:courier;}
+
+#OptionsPage #header {margin-bottom:20px;}
+#OptionsPage #title {color: #fff}
+#OptionsPage #container {width:85%; margin:auto;}
+#OptionsPage label {margin-right:10px;}
+#OptionsPage .second-radio {margin-left:10px;}
+#OptionsPage p { color:#031634;}
+#OptionsPage a {text-decoration:underline;}
+#OptionsPage #feed {margin-left:10px;}
+</style>
+</head>
+<body>
+	<div id="container">
+	<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div id="header">
+			<a class="navbar-brand" id="title" href="https://hn.algolia.com/?query=&sort=byPopularity&prefix&page=0&dateRange=last24h&type=story">Top 10 Hacker News - Last Day</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+	    <li><a href="https://play.google.com/store/apps/details?id=com.andromo.dev224296.app208796">Economic Indicators (Google Play)</a></li>
+            <li><a href="http://bridnap.github.io/git-ref/">Git Quick Reference</a></li>
+            <li><a href="http://bridnap.github.io/rtsearch/">Routing Number Search</a></li>
+            <li><a href="http://bridnap.github.io/whatismyip/">What Is My IP?</a></li>
+			<li><a href="#" id="options">Options</a></li>
+			<li><a href="#" id="refresh">Refresh</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		</div>
+		
+	</div>
+</nav>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<table id="feed" class="table">
+		</table>
+	</div>
+	  <div class="panel-footer">
+	  
+      <input type="text" id="searchbox" name="searchbox" placeholder="Search HN via Algolia" />
+	  <div class="btn-group">
+      <input type="submit" id="searchbutton" value="Search" class="btn btn-xs btn-primary"/>
+    </div>
+	  </div>
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
+
+</body>
+</html>
