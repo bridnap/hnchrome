@@ -1,30 +1,54 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Hacker News for Google Chrome Options</title>
-	<script src="jquery.js"></script>
-	<script src="core.js"></script>
-	<script src="options.js"></script>
-	<link href="style.css" rel="stylesheet" type="text/css"/>
-</head>
-<body id='OptionsPage'>
-	<div id="container">
-		<div id="header">
-			<img src="icon18.png" />
-			<span id="title">Extension Options</span>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Minimal Hacker News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Minimal Hacker News</a>
 		</div>
-		<div id="feed">
-			<label for="RequestInterval">Update Frequency:</label>
-			<select id="RequestInterval" name="RequestInterval">
-				<option value="1800000">30 minutes</option>
-				<option value="3600000">1 hour</option>
-			</select><br/>
-			<label>Limiting choices due to <a href="http://www.amazon.com/The-Paradox-Choice-More-Less/dp/149151423X">The Paradox of Choice</a>, and work interrupting breaks.</label><br/><br/>
-			<label for="BackgroundTabs">Immediate focus on clicked stories or tab it for reading later?</label><br/>
-			<input type="radio" class='background-tabs-radio' name="BackgroundTabs" value="true"> Immediate Focus
-			<input type="radio" class="second-radio background-tabs-radio" name="BackgroundTabs" value="false"> Read Later<br/>
-			<p>Created by <b>Brian Plunkett</b> @ <a href='https://www.linkedin.com/in/briandplunkett' target='_blank'>LinkedIn</a><p>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+
+	    <li><a href="https://play.google.com/store/apps/details?id=com.andromo.dev224296.app208796">Economic Indicators (Google Play)</a></li>
+            <li><a href="http://bridnap.github.io/git-ref/">Git Quick Reference</a></li>
+            <li><a href="http://bridnap.github.io/rtsearch/">Routing Number Search</a></li>
+            <li><a href="http://bridnap.github.io/whatismyip/">What Is My IP?</a></li>
+					</ul>
+				</li>
+			<li><a href="http://bridnap.github.io">About the Author</a></li>
+			</ul>
 		</div>
 	</div>
-</body>
+</nav>
+<div class="jumbotron">
+  <h1>&nbsp;Minimal Hacker News</h1>
+  <div class="well">
+  <p>I based this app off my desire to limit work interrupting choices (See <a href="http://www.amazon.com/The-Paradox-Choice-More-Less/dp/149151423X">The Paradox of Choice</a> if interested in learning more). There are so many unique ways to ingest information, so many ways to design elements that will catch attention, that focus and attention to the task at hand are simply too difficult.</p>
+<p>That said, this app just shows a curated group of 10 popular Hacker News items over the last 24 hours. It refreshes once an hour, but because the listing itself is for popular items over the last 24, and so it only changes when something major occurs.</p>
+<p>It's not a miracle app: it won't save you from going down the rabbit hole, and endlessly reading.  But I've found that if the list doesn't change much, my eyes don't register anything new, and I get back to work. If it helps you, let me know by reaching to me below.</div><br/><br/>
+&nbsp;&nbsp;<a href="https://www.linkedin.com/in/briandplunkett"><i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a>
+&nbsp;&nbsp;&nbsp;<a href="https://github.com/bridnap"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
+</p>
+  <!-- Single button -->
+</div>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  
+  </body>
 </html>
