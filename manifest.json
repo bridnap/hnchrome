@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Hacker News for Chrome",
+  "name": "Hacker News Bootstrapped",
   "version": "1",
-  "description": "Lists 30 most current stories trending on Hacker News",
+  "description": "Lists 10 most current stories trending on Hacker News over the last 24 hours",
   "icons": { "48": "icon48.png",
 	         "128": "icon128.png" },
   "browser_action": {
-    "default_title": "Hacker News for Chrome",
+    "default_title": "Hacker News Bootstrapped",
     "default_icon": "icon18.png",
     "default_popup": "popup.html"
   },
