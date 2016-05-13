@@ -12,17 +12,9 @@
   #container, #spinner {width:350px; margin:0px auto;}
   #footer {font-size:11px;}
 #spinner {height:350px;}
-#searchbox { margin:12px 3px 0 26px; font-size:11px; width:215px;}
+#searchbox, #options, #refresh { margin:6px 3px 0 26px; font-size:11px; width:150px;}
 #searchbutton {font-family:courier;}
 
-#OptionsPage #header {margin-bottom:20px;}
-#OptionsPage #title {color: #fff}
-#OptionsPage #container {width:85%; margin:auto;}
-#OptionsPage label {margin-right:10px;}
-#OptionsPage .second-radio {margin-left:10px;}
-#OptionsPage p { color:#031634;}
-#OptionsPage a {text-decoration:underline;}
-#OptionsPage #feed {margin-left:10px;}
 </style>
 </head>
 <body>
@@ -31,7 +23,7 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<div id="header">
-			<a class="navbar-brand" id="title" href="https://hn.algolia.com/?query=&sort=byPopularity&prefix&page=0&dateRange=last24h&type=story">Top 10 Hacker News - Last Day</a>
+			<a class="navbar-brand" id="title" href="https://hn.algolia.com/?query=&sort=byPopularity&prefix&page=0&dateRange=last24h&type=story">Top 10 Hacker News Over 24 Hours</a>
 			</div>
 		</div>
 	</div>
@@ -42,13 +34,17 @@
 		</table>
 	</div>
 	  <div class="panel-footer">
-	  
       <input type="text" id="searchbox" name="searchbox" placeholder="Search HN via Algolia" />
 	  <div class="btn-group">
       <input type="submit" id="searchbutton" value="Search" class="btn btn-xs btn-primary"/>
-    </div>
-				<span><a href="options.html" id="options" target="_blank">Options</a></span>
-			<span><a href="#" id="refresh">Refresh</a></span>
+	  <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  <span class="caret"></span>
+	  <span class="sr-only">Toggle Dropdown</span>
+	  </button>
+	  <ul class="dropdown-menu">
+	  <li><a href="http://bridnap.github.io/hnchrome/options.html" id="options" target="_blank">Options</a></li>
+	  </ul>
+	   </div>
 	  </div>
 </div>
 </div>

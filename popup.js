@@ -4,7 +4,7 @@ window.onload = function(){
 };
 function setupEvents() {
   $('#submitLink').click(submitCurrentTab);
-  $('#refresh').click(refreshLinks);
+//  $('#refresh').click(refreshLinks);
   $('#searchbox').keypress(searchOnEnter);
   $('a#options').click(function(){
     openOptions();
@@ -37,7 +37,7 @@ function buildPopup(links) {
     hnLink = links[i];
     var row = document.createElement("tr");
     row.className = "link";
-    var num = document.createElement("span");
+	var num = document.createElement("span");
 	num.className = "badge";
     num.innerText = i+1 + ". ";
     var link_col = document.createElement("td")
@@ -47,16 +47,17 @@ function buildPopup(links) {
       title.title = hnLink.Link + " ";
       title.href = hnLink.Link;
       title.addEventListener("click", openLink);
-    var points = document.createElement("a");
+	var points = document.createElement("a");
       points.className = "label label-primary";
 	  points.href = hnLink.ItemLink;
 	  points.title = hnLink.ItemLink;
-      points.innerText = hnLink.Points + " points";
+      points.innerText = " " + hnLink.Points + " pts";
 	  points.addEventListener("click", openLink);
+	row.appendChild(num);
+    row.appendChild(link_col)
     link_col.appendChild(title);
     link_col.appendChild(points);
-    row.appendChild(num);
-    row.appendChild(link_col)
+
     feed.appendChild(row);
   }
   hideElement("spinner");
