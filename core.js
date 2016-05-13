@@ -3,7 +3,7 @@ var req;
 var buildPopupAfterResponse = false;
 var OnFeedSuccess = null;
 var OnFeedFail = null;
-var retryMilliseconds = 120000;
+var retryMilliseconds = 1800000;
 
 function SetInitialOption(key, value) {
 	if (localStorage[key] == null) {
